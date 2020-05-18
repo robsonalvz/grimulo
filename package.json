@@ -13,6 +13,6 @@
     "shelljs": "^0.8.4"
   },
   "bin": {
-    "create-robsonalvz-app": "index.js"
+    "create-react-redux-app": "index.js"
   }
 }

@@ -1,5 +1,5 @@
 module.exports = `
-package com.teclaup.irecorte.{{Entity}};
+package {{package}};
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

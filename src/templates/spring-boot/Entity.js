@@ -1,4 +1,4 @@
-module.exports = ` package com.teclaup.irecorte.employee;
+module.exports = ` package {{package}};
 import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

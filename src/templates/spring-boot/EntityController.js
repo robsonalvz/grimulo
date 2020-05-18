@@ -1,9 +1,6 @@
 module.exports = ` 
-package com.teclaup.irecorte.{{Entity}};
+package {{package}};
 
-
-import com.teclaup.irecorte.exception.EntityNotFoundException;
-import com.teclaup.irecorte.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,9 +47,6 @@ public class {{Entity}}Controller {
     public void delete(@PathVariable("id") Long id){
         log.info("Buscando {{Entity}} com o ID: {}", id);
         Optional<{{Entity}}> {{Entity}} = this.{{Entity}}Service.findById(id);
-        if(!{{Entity}}.isPresent()){
-            throw new EntityNotFoundException({{Entity}}.class, id);
-        }
         this.{{Entity}}Service.delete({{Entity}}.get());
     }
 
@@ -61,9 +55,6 @@ public class {{Entity}}Controller {
         log.info("Buscando {{Entity}} pelo ID: {}", id);
         Response<{{Entity}}> response = new Response<{{Entity}}>();
         Optional<{{Entity}}> {{Entity}} = this.{{Entity}}Service.findById(id);
-        if (!{{Entity}}.isPresent()) {
-            throw new EntityNotFoundException({{Entity}}.class, id);
-        }
         response.setData({{Entity}}.get());
         return ResponseEntity.ok(response);
     }

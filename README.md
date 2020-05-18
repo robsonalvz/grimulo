@@ -1,4 +1,4 @@
-## Generator CLI
+## Grimulo CLI
 
 Projeto para geração automática de arquivos templates.
 

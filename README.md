@@ -1,6 +1,6 @@
 ## Grimulo CLI
 
-Projeto para geração automática de arquivos templates.
+Projeto para geração de código baseado em templates.
 
 ## Pré requisitos
 
